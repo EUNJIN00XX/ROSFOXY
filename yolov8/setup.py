@@ -1,11 +1,11 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 package_name = 'yolov8'
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=[package_name],
+    packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -13,13 +13,19 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='road2022',
-    maintainer_email='uu007007007@naver.com',
+    maintainer='rokey',
+    maintainer_email='rkdtjtneh@kyonggi.ac.kr',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            # 'img_pub = sequrity_alert.image_publisher:main',
+            # 'img_sub = sequrity_alert.image_subscriber:main',
+            'yolo_pub = yolov8.yolo_publisher:main',
+            # 'yolo_sub = sequrity_alert.yolo_sub:main',
+            # 'zone_req = sequrity_alert.zone_request_srv:main',
+            # 'zone_get = sequrity_alert.test_robot_req_sub:main'
         ],
     },
 )

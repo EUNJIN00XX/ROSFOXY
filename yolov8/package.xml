@@ -1,13 +1,22 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>yolov8</name>
+  <name>sequrity_alert</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="uu007007007@naver.com">road2022</maintainer>
+  <maintainer email="rkdtjtneh@kyonggi.ac.kr">rokey</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <!-- 
+  <depend></depend>
+  <depend></depend> -->
+  <exec_depend>opencv-python</exec_depend>  <!-- OpenCV for image processing -->
+  <exec_depend>shapely</exec_depend>  <!-- Shapely for geometry operations -->
+  <exec_depend>ultralytics</exec_depend>  <!-- YOLO package for object detection -->
+
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
